@@ -1,0 +1,21 @@
+spring:
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/quartz?characterEncoding=utf-8&useSSL=false
+      username: root
+      password: 696994
+  jpa:
+    show-sql: true
+
+scheduler:
+    quartz:
+      enabled: true
+      schedulerName: Quartztest
+      overwriteExistingJobs: true
+
+job:
+  cron:
+      upperRepeatNotifyJob: 0 0/3 * * * ?
+      middleRepeatNotifyJob: 0 0/5 * * * ?
+
+
