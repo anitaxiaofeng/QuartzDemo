@@ -3,9 +3,16 @@ spring:
       driver-class-name: com.mysql.jdbc.Driver
       url: jdbc:mysql://127.0.0.1:3306/quartz?characterEncoding=utf-8&useSSL=false
       username: root
-      password: 696994
+      password: root
   jpa:
-    show-sql: true
+      hibernate:
+  #            ddl-auto: none
+          ddl-auto: update
+
+      properties:
+          hibernate.globally_quoted_identifiers: true
+          hibernate.show_sql: false
+          hibernate.format_sql: true
 
 scheduler:
     quartz:
@@ -15,7 +22,7 @@ scheduler:
 
 job:
   cron:
-      upperRepeatNotifyJob: 0 0/3 * * * ?
-      middleRepeatNotifyJob: 0 0/5 * * * ?
+      upperRepeatNotifyJob: 0/10 * * * * ?
+      middleRepeatNotifyJob: 0/30 * * * * ?
 
 

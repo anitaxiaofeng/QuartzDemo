@@ -24,7 +24,7 @@ import javax.sql.DataSource;
  */
 @Configuration
 @Slf4j
-@ConditionalOnProperty(name = "schedular.quartz.enabled", havingValue = "true")
+@ConditionalOnProperty(name = "scheduler.quartz.enabled", havingValue = "true")
 public class QuartzSchedulerConfig {
 
     @Bean

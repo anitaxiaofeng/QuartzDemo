@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Data
 @Slf4j
 @Component
-@ConfigurationProperties
+@ConfigurationProperties("scheduler")
 public class SchedulerProperties implements InitializingBean {
 
     private QuartzProperties quartz;

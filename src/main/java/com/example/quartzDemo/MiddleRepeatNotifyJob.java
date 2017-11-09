@@ -11,6 +11,6 @@ import org.quartz.JobExecutionException;
 public class MiddleRepeatNotifyJob implements Job {
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-        System.out.println("executing upperRepeatNotifyJob");
+        System.out.println("executing middleRepeatNotifyJob");
     }
 }
